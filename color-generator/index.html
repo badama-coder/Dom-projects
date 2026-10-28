@@ -5,9 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Palette Generator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    Color Generator
+  <body class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]">
+    <div class="mx-auto flex min-h-screen w-[1240px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-colors hover:border-[#d9f99d]/35 hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65">The everyday collection / 03</span>
+      </header>
+
+      <div class="flex flex-1 flex-col items-center py-10 w-full px-[100px]">
+        <div class="flex h-[104px] w-full justify-between">
+          <div>
+            <div>Color palettes.</div>
+            <div>Generated shades with Tailwind color names. Click a shade to copy its HEX background color.</div>
+          </div>
+          <div>
+            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.06602 3.08489C2.43591 2.41219 2.96604 1.84113 3.60943 1.42233C4.25282 1.00354 4.98959 0.749929 5.75444 0.683994C6.51929 0.618058 7.2886 0.74183 7.99417 1.04434C8.69974 1.34685 9.31979 1.81875 9.79935 2.41822L11.3327 6.41822M0.666016 6.41822L2.19935 10.4182C2.67891 11.0177 3.29896 11.4896 4.00453 11.7921C4.7101 12.0946 5.4794 12.2184 6.24425 12.1524C7.0091 12.0865 7.74587 11.8329 8.38926 11.4141C9.03265 10.9953 9.56279 10.4243 9.93268 9.75155" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" stroke="#09090B"/>
+</svg>
+            <div>Shuffle palettes</div>
+          </div>
+        </div>
+        <div>
+          <div>100 → 950 · LIGHT TO DARK</div>
+          <div>Ready to explore.</div>
+        </div>
+        <div>
+          <div>
+            <div>Red</div>
+            <div>
+              <div>
+                <div></div>
+                <div>100</div>
+                <div>#FDE3E3</div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
   </body>
 </html>
