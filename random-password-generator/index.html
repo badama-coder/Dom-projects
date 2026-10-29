@@ -26,32 +26,49 @@
       </header>
 
       <div class="flex flex-1 items-center justify-center py-10">
-        <div class="w-[520px] h-[571px] bg-[#192B22] rounded-3xl border border-[#FFFFFF1A] p-9">
-          <div><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="44" height="44" rx="12" fill="#4ADE80" fill-opacity="0.15"/>
-<path d="M18.166 20.0833H25.8327C27.4205 20.0833 28.7077 21.3704 28.7077 22.9583V27.7499C28.7077 29.3377 27.4205 30.6249 25.8327 30.6249H18.166C16.5782 30.6249 15.291 29.3377 15.291 27.7499V22.9583C15.291 21.3704 16.5782 20.0833 18.166 20.0833Z" stroke-width="1.62917" stroke-linecap="round" stroke="#86EFAC"/>
-<path d="M18.166 20.0833V17.2083C18.166 16.1917 18.5699 15.2166 19.2888 14.4978C20.0077 13.7789 20.9827 13.375 21.9993 13.375C23.016 13.375 23.991 13.7789 24.7099 14.4978C25.4288 15.2166 25.8327 16.1917 25.8327 17.2083V20.0833M21.9993 24.875V26.7917" stroke-width="1.62917" stroke-linecap="round" stroke="#86EFAC"/>
-</svg>
-</div>
-        <div class="text-[28px] font-semibold mt-6 mb-2">Password generator</div>
-        <div class="text-[#A4B9AD] text-sm mb-8">A strong password. One click away.</div>
-        <div class="text-[#A4B9AD] text-xs mb-3 ">Your password</div>
-        <div class="w-full h-16 flex justify-between items-center bg-[#101B16] pr-3 pl-4 rounded-xl border border-[#FFFFFF1A] mb-3 ">
-          <div class="text-[#BBF7D0] text-lg ">K9#mQ2&xR7!vN4@p</div>
-          <div class="bg-[#FFFFFF0D] px-3 py-2 rounded-lg text-xs font-medium">Copy</div>
-        </div>
-        <div class="text-[#A4B9AD] text-xs mb-6" >Uses letters, numbers, and symbols.</div>
-        <div class="flex justify-between items-baseline mb-4">
-          <div class="text-[#DCECE2] text-sm">Password length</div>
-          <div class="text-[#86EFAC] text-lg ">16</div>
-        </div>
-        <input type="range" min="8" max="24" value="16" class="w-full h-[6px] accent-[#4ADE80] mb-1">
-        <div class="flex justify-between text-[#8AA294] text-xs mb-6">
-          <div>8</div>
-          <div>24</div>
-        </div>
-        <div class="bg-[#4ADE80] w-full h-[48px] rounded-xl flex justify-center items-center text-[#102418] text-sm font-semibold mb-5">Generate password</div>
-        <div class="text-[#8AA294] text-xs flex justify-center ">Generated in your browser. Never saved.</div>
+        <div class="w-[520px] bg-[#192B22] rounded-3xl border border-[#FFFFFF1A] p-9">
+          <div>
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="12" fill="#4ADE80" fill-opacity="0.15" />
+              <path
+                d="M18.166 20.0833H25.8327C27.4205 20.0833 28.7077 21.3704 28.7077 22.9583V27.7499C28.7077 29.3377 27.4205 30.6249 25.8327 30.6249H18.166C16.5782 30.6249 15.291 29.3377 15.291 27.7499V22.9583C15.291 21.3704 16.5782 20.0833 18.166 20.0833Z"
+                stroke-width="1.62917"
+                stroke-linecap="round"
+                stroke="#86EFAC"
+              />
+              <path
+                d="M18.166 20.0833V17.2083C18.166 16.1917 18.5699 15.2166 19.2888 14.4978C20.0077 13.7789 20.9827 13.375 21.9993 13.375C23.016 13.375 23.991 13.7789 24.7099 14.4978C25.4288 15.2166 25.8327 16.1917 25.8327 17.2083V20.0833M21.9993 24.875V26.7917"
+                stroke-width="1.62917"
+                stroke-linecap="round"
+                stroke="#86EFAC"
+              />
+            </svg>
+          </div>
+          <div class="text-[28px] font-semibold mt-6 mb-2">Password generator</div>
+          <div class="text-[#A4B9AD] text-sm mb-8">A strong password. One click away.</div>
+          <div class="text-[#A4B9AD] text-xs mb-3">Your password</div>
+          <div class="w-full h-16 flex justify-between items-center bg-[#101B16] pr-3 pl-4 rounded-xl border border-[#FFFFFF1A] mb-3">
+            <input type="text" spellcheck="false" autocomplete="off" id="generated-password" class="text-[#BBF7D0] text-lg flex-1" />
+            <button type="button" id="copy-button" class="cursor-pointer hover:bg-[#FFFFFF1D] bg-[#FFFFFF0D] px-3 py-2 rounded-lg text-xs font-medium text-[#DCECE2] w-fit">Copy</button>
+          </div>
+          <div id="message" class="text-[#A4B9AD] text-xs mb-6">Uses letters, numbers, and symbols.</div>
+          <div class="flex justify-between items-baseline mb-4">
+            <div class="text-[#DCECE2] text-sm">Password length</div>
+            <div id="password-length-output" class="text-[#86EFAC] text-lg">16</div>
+          </div>
+          <input id="password-length-range-input" type="range" min="8" max="24" value="16" class="w-full h-[6px] accent-[#4ADE80] mb-1" />
+          <div class="flex justify-between text-[#8AA294] text-xs mb-6 mt-3">
+            <div>8</div>
+            <div>24</div>
+          </div>
+          <button
+            type="button"
+            id="generate-password-button"
+            class="hover:bg-[#86EFAC] cursor-pointer bg-[#4ADE80] w-full h-[48px] rounded-xl flex justify-center items-center text-[#102418] text-sm font-semibold mb-5"
+          >
+            Generate password
+          </button>
+          <div class="text-[#8AA294] text-xs flex justify-center">Generated in your browser. Never saved.</div>
         </div>
       </div>
     </div>
