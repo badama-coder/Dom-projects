@@ -5,9 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    Stopwatch
+  <body class="min-h-screen min-w-[1000px] bg-[#101714] font-sans text-[#f0fdf4]">
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#c5d9bd]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#c5d9bd]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#c5d9bd] transition-colors hover:border-[#c5d9bd]/35 hover:bg-[#c5d9bd]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] motion-reduce:transition-none"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#c5d9bd]/65">The everyday collection / 04</span>
+      </header>
+      
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="bg-[#19231E8C] border border-[#FFFFFF26] rounded-3xl w-[620px] p-[40px]">
+          <div class="flex justify-between">
+            <div class="bg-[#B5CBB21A] p-[10.5px] rounded-xl">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.1673 13.4167C19.1673 17.6508 15.7348 21.0833 11.5007 21.0833C7.26647 21.0833 3.83398 17.6508 3.83398 13.4167C3.83398 9.18248 7.26647 5.75 11.5007 5.75C15.7348 5.75 19.1673 9.18248 19.1673 13.4167Z" stroke-width="1.62917" stroke-linecap="round" stroke-linejoin="round" stroke="#C5D9BD"/>
+<path d="M11.5 9.58341V13.4167L13.4167 15.3334M8.625 1.91675H11.5M11.5 1.91675H14.375M11.5 1.91675V5.75008M17.25 6.70841L19.1667 4.79175" stroke-width="1.62917" stroke-linecap="round" stroke-linejoin="round" stroke="#C5D9BD"/>
+</svg>
+            </div>
+            <div class="flex items-center w-[62px] text-[#C5D9BD] text-sm font-medium bg-[#B5CBB20D] border border-[#C5D9BD26] py-[6px] px-[12px] rounded-[99px]">Ready</div>
+          </div>
+          <div>Stopwatch</div>
+          <div>Make time for what matters.</div>
+          <div>
+            <div>
+              <div>00</div>
+              <div>HOURS</div>
+            </div>
+            <div>:</div>
+            <div>
+              <div>00</div>
+              <div>MINUTES</div>
+            </div>
+            <div>:</div>
+            <div>
+              <div>00</div>
+              <div>SECONDS</div>
+            </div>
+          </div>
+          <div>
+            <div>Start</div>
+            <div>Pause</div>
+            <div>Reset</div>
+          </div>
+          <div>A moment of focus. At your own pace.</div>
+        </div>
+      </div>
+    </div>
   </body>
-</html>
+</html> 
