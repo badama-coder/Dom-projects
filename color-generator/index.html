@@ -25,13 +25,13 @@
         <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65">The everyday collection / 03</span>
       </header>
 
-      <div class="flex flex-1 flex-col items-center py-10 w-full px-[100px]">
+      <div class="flex flex-1 flex-col items-center py-10 ">
         <div class="flex h-[104px] w-full justify-between">
           <div>
             <div class="text-3xl text-[#F4F4F5] font-semibold mb-3">Color palettes.</div>
             <div class="text-[#A1A1AA]">Generated shades with Tailwind color names. Click a shade to copy its HEX background color.</div>
           </div>
-          <div class="bg-[#D9F99D] text-[#09090B] h-12 w-[186px] flex items-center justify-center gap-2 font-semibold text-sm rounded-xl">
+          <button id="shuffle-palettes" type="button" class="bg-[#D9F99D] text-[#09090B] h-12 w-[186px] flex items-center justify-center gap-2 font-semibold text-sm rounded-xl cursor-pointer hover:bg-[#F3FBE4]">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.3327 4.66675V8.00008H9.99935M2.66602 11.3334V8.00008H5.99935" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" stroke="#09090B" />
               <path
@@ -42,27 +42,22 @@
                 stroke="#09090B"
               />
             </svg>
-
-            <div class=" ">Shuffle palettes</div>
-          </div>
+            Shuffle palettes
+          </button>
         </div>
         <div class="flex justify-between items-center w-full h-[55px] border-t border-[#27272A]">
           <div class="text-[#A1A1AA] text-xs font-medium">100 → 950 · LIGHT TO DARK</div>
-          <div class="text-[#A1A1AA] text-xs">Ready to explore.</div>
+          <div id="status" class="text-[#A1A1AA] text-xs">Ready to explore.</div>
         </div>
-        <div class="w-full flex flex-col gap-7 justify-between">
-          <div class="flex-1 flex-col h-[136px] w-full">
-            <div class="text-sm font-semibold mb-3">Red</div>
-            <div class="flex gap-3 w-full">
-              <div class="flex flex-col items-center">
-                <div class="h-[64px] w-[113px] bg-[#FDE3E3] rounded-xl mb-2"></div>
-                <div class="text-xs text-[#D4D4D8] font-medium mb-1">100</div>
-                <div class="text-[9px] text-[#A1A1AA] font-mono">#FDE3E3</div>
-              </div>
-            </div>
-          </div>
+        <div id="colors"  class="w-full flex flex-col gap-7 justify-between">
+        
         </div>
+        
       </div>
     </div>
   </body>
 </html>
+
+
+
+
