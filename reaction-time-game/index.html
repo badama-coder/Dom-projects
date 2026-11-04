@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reaction time</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/3566a1fbda.js" crossorigin="anonymous"></script>
     <script src="index.js" defer></script>
   </head>
   <body class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]">
@@ -25,28 +26,23 @@
       </header>
 
       <div class="flex flex-1 items-center justify-center py-10">
-        <div class="bg-[#18181B] size-[575px] rounded-3xl p-8">
+        <div class="bg-[#18181B] size-[575px] rounded-3xl p-8 border border-[#27272A]">
           <div class="text-[#F4F4F5] font-semibold text-2xl mb-2">Reaction time</div>
           <div class="text-[#A1A1AA] text-sm mb-6">Wait for green, then click as quickly as you can.</div>
-          <div class="w-lg h-[256px] bg-[#27272A] flex flex-col justify-center items-center rounded-2xl gap-3">
-            <div class=""><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M42 24C42 33.9411 33.9411 42 24 42C14.0589 42 6 33.9411 6 24C6 14.0589 14.0589 6 24 6C33.9411 6 42 14.0589 42 24Z" stroke-width="2" stroke="#F4F4F5"/>
-<path d="M35 24C35 30.0751 30.0751 35 24 35C17.9249 35 13 30.0751 13 24C13 17.9249 17.9249 13 24 13C30.0751 13 35 17.9249 35 24Z" stroke-width="2" stroke="#F4F4F5"/>
-<path d="M24 27C25.6569 27 27 25.6569 27 24C27 22.3431 25.6569 21 24 21C22.3431 21 21 22.3431 21 24C21 25.6569 22.3431 27 24 27Z" fill="#F4F4F5" stroke-width="2" stroke="#F4F4F5"/>
-</svg>
-</div>
-            <div class="font-semibold text-2xl text-[#F4F4F5]">Ready when you are</div>
-            <div class="text-sm text-[#F4F4F5]">Click to start</div>
-          </div>
+          <button id="button-game" type="button" class="w-lg h-[256px] bg-[#27272A] flex flex-col justify-center items-center rounded-2xl gap-3 cursor-pointer">
+            <i id="icon" class="fa-solid fa-bullseye text-4xl"></i>
+            <div id="text-ready" class="font-semibold text-2xl text-[#F4F4F5]">Ready when you are</div>
+            <div id="text-click" class="text-sm text-[#F4F4F5]">Click to start</div>
+          </button>
           <div class="flex gap-3 h-[84px] mt-6">
-            <div class="flex-1 flex flex-col items-center justify-center rounded-xl bg-[#27272A] gap-1">
-              <div class="text-[#D9F99D] text-2xl">—</div>
+            <button class="flex-1 flex flex-col items-center justify-center rounded-xl bg-[#27272A] gap-1">
+              <div id="last-attempt" class="text-[#D9F99D] text-2xl font-light">—</div>
               <div class="text-[#A1A1AA] text-xs">Last attempt</div>
-            </div>
-            <div class="flex-1 flex flex-col items-center justify-center rounded-xl bg-[#27272A] gap-1">
-              <div class="text-[#D9F99D] text-2xl">—</div>
+            </button>
+            <button class="flex-1 flex flex-col items-center justify-center rounded-xl bg-[#27272A] gap-1">
+              <div id="best-attempt" class="text-[#D9F99D] text-2xl font-light">—</div>
               <div class="text-[#A1A1AA] text-xs">Best this session</div>
-            </div>
+            </button>
           </div>
           <div class="text-[#A1A1AA] text-xs/5 mt-5 text-center">Click the panel, or focus it and press Space or Enter. Clicking before green ends the attempt.</div>
         </div>
